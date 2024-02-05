@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> 
+    <!-- <link rel="stylesheet" href="to do .css"> -->
+    <link rel="stylesheet" href="todocss.css">
+</head>
+<body>
+    
+
+    <div class="ayo1">
+        <h3>Category</h3>
+        <ul id="categoryList">
+            
+        </ul>
+        <div class="hide">
+            <input type="checkbox" id="checkHide" onclick="checkBoxHide()"><p style="padding-left: 7px;">Hide Done Task</p>
+        </div>
+        <div class="logoutbtn">
+            <button type="submit" id="exit" onclick="logOut()"  ><a href="todoHome.html">Log out</a></button> 
+        </div>
+    </div>
+   
+    <div class="ayo2">
+        <h1 >My <span style="color: hotpink;">TO</span><span style="color:  rgb(110, 80, 116) ">DO</span>  List</h1>
+        <div class="imgtask">
+            <img src="img/icons8-plus-24.png" alt="" id="myBtn" >
+                <!-- <div class="opentask">
+                    <input type="text" placeholder="Create Task" id="taskInput"> <button onclick="createTask()">Add</button>
+                </div> -->
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <!-- <input type="text" placeholder="description" >  -->
+                      <h3>Title</h3>
+                        <textarea name="" id="taskHead" cols="1" rows="4" placeholder="" style="height: 65px; width: 90%; font-weight: bolder;">
+                        </textarea>
+                        <h3>Description</h3>
+                        <textarea id="taskInput" cols="10" rows="10" type="text" placeholder="" >
+                        </textarea> <br>
+                        <button onclick="createTask()" >Add</button>
+                    </div>
+                  
+                </div>
+        </div>
+    </div>
+
+    <div class="ayo3">
+        <h3>Create Category</h3>
+        
+    </div>
+    
+    <div class="ayo4">
+        <input type="text" id="categoryInput" > <br>
+        <p style="padding-left: 600px; margin-top: 20px;"><span style="color: rgb(110, 80, 116);">Pick</span> <span style="color: hotpink;">a</span> <span style="color: rgb(110, 80, 116);">colour</span> </p>
+        <input class="ayo4ty" type="color" name="" id="colour">
+        <button onclick="createCategory()">Add</button>
+    </div>
+
+    <div class="banner">
+        <!-- <ul class="ban-1" id="ban">
+            <li>
+                <div class="task">
+                    <h4 id="taskTitle">The task title</h4>
+                </div>
+                <p id="taskList">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore adium.</p>
+                <div class="done">
+                    <button >Edit</button> <button style="margin-right: 8px;">Delete</button> 
+                    <input type="checkbox"  id="checkBox" onclick="doneTask()"><p style="margin-top: 8px; margin-left: 3px;">Done</p>
+                </div>
+            </li>
+        </ul> -->
+
+        <ul class="ban-1" id="ban">
+            <li>
+                <div class="task">
+                    <h4 id="taskTitle"></h4>
+                </div>
+                <p id="taskList"></p>
+                <div class="done">
+                    <button >Edit</button> <button style="margin-right: 8px;">Delete</button> 
+                    <input type="checkbox"  id="checkBox" onclick="doneTask()"><p style="margin-top: 8px; margin-left: 3px;">Done</p>
+                </div>
+            </li>
+        </ul>
+          
+                  
+    </div>
+    
+    <!-- <div class="tasksession">
+        <ul id="taskList">
+            <div>
+                <li>djjdjkkkkkkkk</li> <button>Edit</button> <button>Delete</button> 
+            <div class="done">
+                <input type="checkbox" id="checkBox" onclick="doneTask()" style="margin-right: 7px;"><p>Done</p>
+            </div>
+            </div>
+            
+        </ul>
+
+        
+    </div> -->
+    
+    
+    <script src="todojs.js"></script>
+</body>
+</html>

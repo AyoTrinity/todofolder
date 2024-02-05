@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Sign Up</title>
+    <link rel="stylesheet" href="todocss.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> 
+</head>
+<body>
+    <div class="nav2">
+        <div class="nav2a">
+            <a href="todoHome.html"><img src="img/preview-small.jpg" alt=""></a>
+            <div class="nav2a1">
+                <p>Aide your day</p>
+            </div>
+            
+        </div>
+        <div class="nav2b">
+            <div class="nav2b1">
+                <p><a href="">FEATURES</a></p>
+                
+            </div>
+            <div class="nav2b1">
+                <p><a href="">RESOURCES</a></p>
+                
+            </div>
+            <div class="nav2b1">
+                <p><a href="">PRICING</a></p>
+                
+            </div>
+            <div class="nav2b1">
+                <p><a href="todoLogIn.html">LOG IN</a></p>
+                
+            </div>
+            <div class="nav2b1">
+                <p><a href="todoSignUp.html">SIGN UP</a></p>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="useritem" id="userItem">
+        <form  >
+            <marquee style="color: white;"><h1>Sign Up</h1></marquee>
+            <input type="text" name="name" id="name" placeholder="Full Name">
+            <div><span id="nameerror" style="font-size: 13px; color: rgb(236, 232, 232);"></span></div>
+            
+            <input type="email" name="email" id="email" placeholder="Email Address"> 
+            <div><span id="emailerror" style="font-size: 13px; color: rgb(236, 232, 232);"></span></div>
+            
+            <input type="password" name="password" id="password" placeholder="Password"> 
+            <div><span id="passworderror" style="font-size: 13px; color: rgb(236, 232, 232);"></span></div>
+            
+            <button type="button" onclick="user()">Register</button> 
+        </form>
+    </div>
+     
+     
+    <script src="todoSignUp.js"></script>
+</body>
+</html>

@@ -1,0 +1,522 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+}
+
+.get{
+    justify-content: center;
+    
+}
+
+.ayo1{
+    position: fixed;
+    padding: 20px 50px 100vh 50px;
+    /* background-color: rgb(110, 80, 116); */
+    color: rgb(5, 1, 1);
+    font-size: 20px;
+}
+.ayo1 ul{
+    padding-top: 20px;
+    
+}
+.ayo1 li{
+    display: flex;
+    margin-top: 10px;
+}
+.ayo1 button{
+    border: none;
+    margin-left: 7px;
+    margin-top: 8px;
+    padding: 5px 10px;
+    color: rgb(253, 252, 253);
+    background-color:  hotpink;
+}
+.ayo1 button:hover{
+    border: none;
+    margin-left: 7px;
+    margin-top: 8px;
+    padding: 5px 10px;
+    color: rgb(255, 255, 255);
+    background-color:rgb(110, 80, 116);
+    cursor: pointer;
+}
+.categoryColour li span{
+    background-color: black;
+    border-radius: 50%;
+}
+.logoutbtn{
+    margin-top: 50px;
+}
+.logoutbtn button{
+    /* border: 5px solid rgb(110, 80, 116); */
+    border-radius: 25px;
+    margin: 10px 1px;
+    padding: 10px 25px;
+    background-color: rgb(110, 80, 116);
+}
+.logoutbtn button:hover{
+    cursor: pointer;
+    border: 5px solid rgb(110, 80, 116);
+    border-radius: 25px;
+    margin: 10px 1px;
+    padding: 5px 20px;
+    background-color: hotpink;  
+}
+.logoutbtn button a{
+    color: white;
+    text-decoration: none;
+}
+
+.ayo2{
+    display: flex;
+    margin-left: 550px;
+    padding-top: 30px;
+    span{
+        font-family: "Lucida Handwriting", cursive;
+    }
+}
+.ayo2 img{
+    margin-left: 500px;
+    width: 30px;
+    height: 30px;
+}
+.ayo2 img:hover{
+    cursor: pointer;
+    margin-left: 500px;
+    width: 30px;
+    height: 30px;
+}
+.imgtask:hover .opentask{
+    display: contents;
+    background-color: rgb(54, 34, 34);
+    text-align: center;
+    padding: 10px 155px;
+}
+.opentask{
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    top: 72px;
+    left: 0;
+    z-index: 1;
+    background-color: rgb(192, 189, 189);
+    text-align: center;
+    padding: 10px 15px;
+}
+.imgtask:hover .opentask input{
+    border-color: rgb(110, 80, 116);
+    margin-top: 10px;
+    /* margin-left: 50px; */
+    padding: 10px 200px;
+}
+.imgtask:hover .opentask button{
+    border: none;
+    padding: 12px 20px;
+    color: rgb(255, 255, 255);
+    background-color: hotpink;
+}
+
+.ayo3{
+    margin-left: 600px;
+    margin-top: 30px;
+}
+
+.ayo4 input{
+    border-color: rgb(204, 120, 221);
+    margin-top: 10px;
+    margin-left: 450px;
+    padding: 10px 200px;
+}
+.ayo4ty {
+    width: 1px;
+}
+.ayo4 button{
+    border: none;
+    padding: 12px 20px;
+    color: rgb(255, 255, 255);
+    background-color: hotpink;
+}
+.ayo4 button:hover{
+    border: none;
+    padding: 12px 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(110, 80, 116);
+    cursor: pointer;
+}
+
+.tasksession{
+    margin-left: 300px;
+    margin-top: 30px;
+    color: white;
+   
+    
+}
+.tasksession ul{
+    /* display: flex;
+    flex-wrap: wrap; */
+    margin: 30px;
+    padding: 10px;
+    background-color:rgb(110, 80, 116);
+}
+.tasksession li{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tasksession button{
+    border: none;
+    margin-left: 7px;
+    margin-top: 8px;
+    padding: 5px 10px;
+    color: rgb(255, 255, 255);
+    background-color: hotpink;
+    
+}
+.tasksession button:hover{
+    border: none;
+    margin-left: 7px;
+    margin-top: 8px;
+    padding: 5px 10px;
+    color:rgb(255, 255, 255);
+    background-color:  rgb(110, 80, 116);
+    cursor: pointer;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: none;
+        border-radius: 9px;
+        height: 70%;
+        width: 50%; /* Could be more or less, depending on screen size */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            border: none;
+        }
+        .close:hover,
+        .close:focus  {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+         }
+         textarea{
+            height: 30%;
+            width: 90%;
+            margin-bottom: 50px;
+            background-color: #e5e1e1;
+            border: none;
+            border-radius: 4px;
+         }
+         button{
+            margin-left: 300px;
+            margin-top: 30px;
+            padding: 10px 30px;
+            background-color: rgb(110, 80, 116);
+            border: none;
+            color: white;
+         }
+         button:hover{
+            margin-left: 300px;
+            margin-top: 30px;
+            padding: 10px 30px;
+            background-color:hotpink;
+            border: none;
+            color: white;
+         }
+      }
+  }
+.hide{
+    padding-top: 50px;
+    display: flex;
+    font-size: 15px;
+}
+
+.done{
+    display: flex;
+    float: right;
+    font-size: 15px;
+}
+
+.useritem{
+    text-align: center;
+    margin: 10px 350px;
+    padding: 1px 0;
+    
+    background-color:rgb(110, 80, 116);
+    border-radius: 15px;
+    h1{
+        font-family: "Times New Roman", serif;
+        padding-bottom: 23px;
+    }
+}
+.useritem form{
+    /* background-color: hotpink; */
+    margin: 60px;
+    padding-top: 20px;
+}
+.useritem input{
+    width: 400px;
+    height:45px;
+    border-radius: 5px;
+    margin: 5px;
+    border: none;
+}
+.useritem select{
+    width: 300px;
+    height:35px;
+}
+.useritem button{
+    border: 5px solid rgb(110, 80, 116);
+    border-radius: 25px;
+    margin: 30px 20px;
+    padding: 20px 50px;
+    background-color: hotpink;
+    color: white;
+}
+.useritem button:hover{
+    cursor: pointer;
+    border: 5px solid hotpink;
+    border-radius: 25px;
+    margin: 30px 20px;
+    padding: 20px 50px;
+    background-color: rgb(110, 80, 116);
+    color: white;
+}
+.useritem button a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav2{
+    padding-top: 40px;
+    display: flex;
+    /* background-color: rgb(110, 80, 116); */
+    text-decoration: none;
+    color: rgb(110, 80, 116);
+}
+.nav2a{
+    margin-left: 40px;
+    font-size: 15px;
+    line-height: 19.5px;
+    margin-left: 60px;
+}
+.nav2a img{
+    width: 150px;
+    height: 60px;
+}
+.nav2a1{
+    display: flex;
+}
+.nav2a1 p{
+    /* margin-top: 5px; */
+    margin-left: 43px;
+}
+.nav2a1 img{
+    width: 10px;
+    height: 10px;
+    margin-left: 6px;
+    margin-top: 10px;
+}
+.nav2b{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2px;
+    margin-left: 600px;
+    font-size: 15px;
+    
+}
+.nav2b a{
+    text-decoration: none;
+    color: rgb(110, 80, 116);
+}
+.nav2b a:hover{
+    text-decoration: none;
+    color: hotpink;
+}
+.nav2b p{
+    margin: 0 20px;
+}
+.nav2b :hover p{
+    margin: 0 20px;
+    cursor: pointer;
+}
+.nav2b img{
+    margin: 10px 20px 0;
+    width: 10px;
+    height: 10px;
+}
+.nav2b:hover img{
+    margin: 10px 20px 0;
+    width: 10px;
+    height: 10px;
+    transition: ease-in-out;
+    cursor: pointer;
+}
+.nav2b1a{
+    float: left;
+    overflow: hidden;
+}
+.nav2b .nav2b1 {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: "Times New Roman", serif;
+}
+.shopAll{
+    display: none;
+    position: absolute;
+    background-color: rgb(253, 252, 252);
+    width: 100%; 
+    top: 72px;
+    left: 0;
+    z-index: 1;
+    padding: 50px 40px;
+}
+.nav2b1a:hover .shopAll{
+    display: flex;
+}
+.nav2b1a:hover .shopAll1{
+    margin-left: -20px;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+.nav2b1a:hover .shopAllfeatures{
+    font-size: 27px;
+    line-height: 33px;
+}
+.nav2b1a:hover .shopAll img{
+    display: flex;
+    width: 320px;
+    height: 420px;
+    margin-top: 25px;
+}
+.nav2b1a:hover .shopAllwriteup3{
+    margin-top: 3px;
+}
+.shopAllimg{
+    display: flex;
+}
+.shopAllwriteup3{
+    display: flex;
+}
+.nav2c{
+    margin-left: 10px;
+}
+.nav2c img{
+    width: 19px;
+}
+.nav2c input{
+    background-color: rgb(243,243,243);
+    border: none;
+    width: 170px;
+    height: 40px; 
+    color: black;
+}
+.nav2c input p{
+    color: black;
+}
+.nav2d{
+    margin-top: 8px;
+    margin-left: 23px;
+    padding-right: 45px;
+}
+.nav2d img{
+    padding: 0 12px;
+    width: 21px;  
+}
+
+.archi{
+    text-align: center;
+    font-size: 40px;
+}
+.archi p{
+    font-size: 16px;
+    padding-top: 20px;
+    font-family: "Lucida Handwriting", cursive;
+    color: rgb(110, 80, 116);
+}
+.archi span{
+    font-family: "Lucida Handwriting", cursive;
+}
+.archi button{
+    border: none;
+    border-radius: 25px;
+    margin: 50px 20px;
+    padding: 20px 50px;
+    background-color: rgb(110, 80, 116);
+    color: white;
+}
+.archi button:hover{
+    border: 5px solid rgb(110, 80, 116);
+    border-radius: 25px;
+    margin: 50px 20px;
+    padding: 20px 50px;
+    background-color: hotpink;
+    color: white;
+}
+.archi button a{
+    text-decoration: none;
+    color: white;
+}
+
+.banner{
+    font-size: 17px;
+    padding: 10px 50px 50px 0px;
+    margin-left: 300px;
+    display: grid;
+    gap: 10px;
+    color: white;
+    grid-template-columns: auto;
+    .ban-1{
+        background-color:rgb(110, 80, 116);
+        border-radius: 10px;
+        padding: 10px;
+        .task{
+            display: flex; 
+            justify-content: space-between; 
+            padding-bottom: 30px;
+        }
+        .done{
+            display: flex;
+            float: right;
+            padding-top: 30px;
+            
+        }
+    }
+    
+}
+.banner button{
+    border: none;
+    margin-left: 7px;
+    margin-top: 8px;
+    padding: 5px 10px;
+    color: rgb(255, 255, 255);
+    background-color: hotpink;
+    
+}
+.banner button:hover{
+    border: none;
+    margin-left: 7px;
+    margin-top: 8px;
+    padding: 5px 10px;
+    color:rgb(255, 255, 255);
+    background-color:  rgb(110, 80, 116);
+    cursor: pointer;
+}
